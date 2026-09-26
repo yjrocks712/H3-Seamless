@@ -1,4 +1,4 @@
-# Reproduction and evaluation guide
+# Reproducing H3 Seamless on the MiniMax H3 / Wan2GP pipeline
 
 ## What this release enables
 

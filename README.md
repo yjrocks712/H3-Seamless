@@ -1,14 +1,16 @@
-![H3 Seamless — Keep the scene going.](assets/hero.svg)
+![H3 Seamless: MiniMax H3 video continuation with overlap replay, three generation windows and two handoffs.](assets/hero.svg)
 
-# H3 Seamless
+# H3 Seamless — MiniMax H3 Video Continuation
 
 **Your scene shouldn't restart when the generation window ends.**
 
-We built an H3 continuation system that carries the generation forward: the same scene, the original narration, and a fixed-size active video window. It ran successfully across **39.875 seconds, three windows, and two handoffs**. Here is the footage.
+**MiniMax H3 video continuation for Wan2GP, with real before/after footage.** H3 Seamless combines local attention and overlap-trajectory replay to carry an audio-driven talking-head video across generation windows while keeping a fixed-size active video state.
+
+We built it, fixed the audio-encoding blocker, and tested **39.875 seconds, three windows, and two handoffs**. The scene stays continuous in the reviewed handoff frames. Watch the result, then inspect the method.
 
 **[Watch the full result](assets/h3-seamless-v14.mp4)** · **[Watch before / after](assets/before-after.mp4)** · **[Read the method](docs/METHOD.md)**
 
-## Watch the jump disappear
+## Before and after: watch the native H3 reframe disappear
 
 ![Before: native H3 control. After: H3 Seamless V14. Same opening four seconds, normal speed.](assets/before-after.gif)
 
@@ -16,7 +18,7 @@ We built an H3 continuation system that carries the generation forward: the same
 
 This is a whole-pipeline comparison. The opening improvement is not evidence for replay alone: the first replay handoff happens later. We also include the [matched native/V7 attention study](docs/MEDIA.md#the-matched-attention-study), which separates that earlier component test from the final V14 result.
 
-## Then keep going
+## 40-second video demo: three windows, two handoffs
 
 ![Two normal-speed excerpts from the final video, spanning its first and second generation handoffs.](assets/handoffs.gif)
 
@@ -31,7 +33,7 @@ Two different moments from the **same final video**: 18–22 seconds on the left
 
 These are real experiment outputs, not AI-generated promotional reconstructions. The GIFs are compressed previews. [Media provenance, source clips, timestamps, and hashes](docs/MEDIA.md) are included.
 
-## What we fixed
+## How H3 Seamless improves video continuity
 
 We were trying to make one continuous presenter video. Earlier experiments exposed reframing, flashes, and consistency problems. Keeping the entire timeline active also created a memory-scaling problem.
 
@@ -45,7 +47,7 @@ We also corrected a shape-dependent TF32 audio-encoding mismatch by scoping IEEE
 
 The technical name for the extra handoff mechanism is **step-matched overlap-trajectory replay**. It acts during generation, not as a cosmetic crossfade on the finished video.
 
-## More than the existing continuation path
+## H3 Seamless vs. native Wan2GP continuation
 
 The [inspected Wan2GP H3 continuation](https://github.com/deepbeepmeep/Wan2GP/blob/7e6242e4b6e3e60eaf4a888115141979f3e5c471/models/minimax_h3/pipeline.py#L692) uses encoded finished history frames and a final-frame image condition. Our handoff preserves the actual sampled overlap states at matching denoising steps, without decoding and re-encoding the overlap between windows.
 
@@ -75,8 +77,32 @@ We own the engineering work without claiming a world-first algorithm. The [attri
 
 **Release contents:** methodology, pseudocode, actual output videos, comparison assets, and the tool used to assemble those assets. The original renderer and deployment bundle are not packaged as an installable plugin in this release.
 
+## MiniMax H3 continuation FAQ
+
+### How does overlap-trajectory replay extend an H3 video?
+
+Save the overlapping video latents at every denoising step. In the next generation window, restore each saved overlap state at the matching step while the new suffix is generated. This hands off the actual sampled trajectory instead of decoding and re-encoding finished frames. See the [replay algorithm](docs/METHOD.md#4-save-and-replay-the-entire-overlap-trajectory).
+
+### Is this a Wan2GP plugin or a new video model?
+
+Neither in this release. We implemented the experimental continuation system on the MiniMax H3 supplied-audio path in Wan2GP, using the pretrained model without new training. This repository shares the method, pseudocode, evidence videos, and presentation tools; it does not yet ship an installable renderer. Start with the [integration guide](docs/REPRODUCTION.md).
+
+### Does it fix talking-head identity drift and scene resets?
+
+The native control visibly reframes at about 1.33 seconds; both the attention-only V7 and final V14 hold the shot at that moment. The final V14's reviewed handoffs show no obvious identity jump or scene reset. Those are results from this example, not a guarantee for every identity, gesture, or prompt. The [media comparison](docs/MEDIA.md) separates the matched attention experiment from the complete pipeline.
+
+### How long a video has actually been tested?
+
+**39.875 seconds of real generated video.** The bounded-window design addresses the active video-memory cost of longer video generation, but multi-minute visual quality has not been established. The measured run still required roughly 126 GiB of peak PyTorch allocation. See [results and limits](docs/RESULTS.md).
+
+### How does this relate to FreeLOC, FrameCache, and VidRD?
+
+FreeLOC directly inspired the attention design. Saved overlap trajectories are an additional mechanism, with related prior work in FrameCache and VidRD. We credit those works and explain the differences and proposal chronology in [prior work](docs/PRIOR_WORK.md).
+
 ## What is still open
 
 The successful test is about **40 seconds**, not five or ten minutes. Mouth behaviour around pauses needs further work. The full-stack run did not isolate the benefit of every component, and its roughly **126 GiB peak PyTorch allocation** is not a consumer-GPU demonstration. A bounded video window is not a claim of zero drift or unlimited-duration quality.
 
 The next step is clear: reproduce the short result, isolate the components, then test longer and more varied footage. The [evaluation guide](docs/REPRODUCTION.md) lays out how.
+
+Working on Wan2GP, talking-head animation, or long-video generation? **[Inspect the method](docs/METHOD.md), [report a reproduction or failure](https://github.com/yjrocks712/H3-Seamless/issues), and star the repository to find it again.**

@@ -63,3 +63,16 @@ python3 tools/build_demo.py \
 The builder refuses FFmpeg overwrites by default; `--replace` explicitly permits replacement of its generated media. Supply `--font` if neither the macOS Arial nor Linux DejaVu font location exists. Rerunning against the published stream-preserving copies will retain visual content, but their source container hashes differ from the archived originals because metadata was stripped.
 
 This script reproduces the presentation, not the H3 model inference. See the [reproduction guide](REPRODUCTION.md) for the remaining renderer-release requirements.
+
+### GitHub link-preview image
+
+The [social preview](../assets/social-preview.png) uses frame 32 of the published native/V14 comparison, scaled uniformly and placed within a 1280 × 640 branded card. It is a still from the whole-pipeline comparison, not a separate experiment. No synthetic replacement imagery is used.
+
+Rebuild it with Node.js, FFmpeg, and Sharp installed:
+
+```bash
+node tools/build_social_preview.cjs
+# Add --replace only to replace the existing generated preview.
+```
+
+The [builder](../tools/build_social_preview.cjs) verifies the card stays under 1 MB for GitHub. This additional branding asset is separate from the eight experimental presentation assets recorded in `media-manifest.json`.

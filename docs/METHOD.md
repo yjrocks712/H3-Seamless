@@ -1,4 +1,4 @@
-# Method
+# MiniMax H3 video continuation: the H3 Seamless method
 
 This document describes the historical V14 implementation that produced the reported short test. Code blocks are explanatory pseudocode, not a runnable substitute for the native H3 pipeline.
 
