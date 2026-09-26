@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="460" viewBox="0 0 1600 460" role="img" aria-labelledby="title desc">
+  <title id="title">H3 Seamless — Keep the scene going.</title>
+  <desc id="desc">A tested MiniMax H3 continuation implementation. Overlap states connect the first generation window to the next.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101820"/><stop offset="1" stop-color="#17251f"/></linearGradient>
+    <linearGradient id="bridge"><stop stop-color="#b6f36b"/><stop offset="1" stop-color="#57d9ae"/></linearGradient>
+  </defs>
+  <rect width="1600" height="460" rx="22" fill="url(#bg)"/>
+  <path d="M1020 0v460M1100 0v460M1180 0v460M1260 0v460M1340 0v460M1420 0v460M1500 0v460M960 80h640M960 160h640M960 240h640M960 320h640M960 400h640" stroke="#b6f36b" stroke-opacity=".055"/>
+  <rect x="64" y="54" width="10" height="24" rx="3" fill="#b6f36b"/>
+  <text x="88" y="73" font-family="Arial,Helvetica,sans-serif" font-size="18" letter-spacing="3" fill="#b6f36b">BUILT. TESTED. SHARED.</text>
+  <text x="60" y="178" font-family="Arial,Helvetica,sans-serif" font-size="86" font-weight="700" letter-spacing="-3" fill="#f4f5eb">H3 Seamless</text>
+  <text x="64" y="242" font-family="Arial,Helvetica,sans-serif" font-size="40" fill="#f4f5eb">Keep the scene going.</text>
+  <text x="65" y="292" font-family="Arial,Helvetica,sans-serif" font-size="22" fill="#aabbb1">Continuous video for MiniMax H3. Powered by overlap replay.</text>
+  <path d="M65 333h793" stroke="#34483e"/>
+  <text x="65" y="385" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#b6f36b">39.875s</text>
+  <text x="219" y="384" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#aabbb1">TESTED OUTPUT</text>
+  <text x="403" y="385" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#b6f36b">3</text>
+  <text x="441" y="384" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#aabbb1">WINDOWS</text>
+  <text x="611" y="385" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#b6f36b">2</text>
+  <text x="649" y="384" font-family="Arial,Helvetica,sans-serif" font-size="16" fill="#aabbb1">HANDOFFS</text>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <text x="993" y="91" font-size="14" letter-spacing="2" fill="#aabbb1">DON'T RESTART THE SHOT.</text>
+    <text x="993" y="121" font-size="14" letter-spacing="2" fill="#b6f36b">CARRY THE GENERATION FORWARD.</text>
+    <rect x="988" y="158" width="362" height="70" rx="10" fill="#233329" stroke="#466544"/>
+    <rect x="1272" y="158" width="78" height="70" rx="10" fill="url(#bridge)"/>
+    <text x="1012" y="200" font-size="19" fill="#f4f5eb">WINDOW 01</text>
+    <path d="M1310 239v25h-100v25" fill="none" stroke="#b6f36b" stroke-width="3"/>
+    <path d="m1202 280 8 10 8-10" fill="none" stroke="#b6f36b" stroke-width="3"/>
+    <text x="1328" y="270" font-size="13" fill="#b6f36b">SAME-STEP STATES</text>
+    <rect x="1170" y="304" width="362" height="70" rx="10" fill="#233329" stroke="#466544"/>
+    <rect x="1170" y="304" width="78" height="70" rx="10" fill="url(#bridge)"/>
+    <text x="1270" y="346" font-size="19" fill="#f4f5eb">WINDOW 02</text>
+    <text x="997" y="416" font-size="13" fill="#aabbb1">yjrocks712 × Codex  /  Methodology + real test footage</text>
+  </g>
+</svg>

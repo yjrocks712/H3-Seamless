@@ -1,0 +1,330 @@
+{
+  "purpose": "Presentation media derived from existing outputs; no new AI render.",
+  "source_files": {
+    "native-control": {
+      "sha256": "4e9581f174769d52887a4f859fcf8f494a07fb278e8876a4ae227484f404aec1",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 576,
+            "r_frame_rate": "24/1",
+            "duration": "20.041667",
+            "nb_frames": "481"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "20.040998",
+            "nb_frames": "865"
+          }
+        ],
+        "format": {
+          "duration": "20.041667"
+        }
+      }
+    },
+    "attention-v7": {
+      "sha256": "757c233e8a27c4e0e228f293728fa3fc0b93a72c877b05865b62edaff4d8836c",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 576,
+            "r_frame_rate": "24/1",
+            "duration": "20.041667",
+            "nb_frames": "481"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "20.040998",
+            "nb_frames": "865"
+          }
+        ],
+        "format": {
+          "duration": "20.041667"
+        }
+      }
+    },
+    "h3-seamless-v14": {
+      "sha256": "9ccc39a8f50d901e947623e2483232a528fd55b8ff0be23b6bef6c2ae8739963",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 576,
+            "r_frame_rate": "24/1",
+            "duration": "39.875000",
+            "nb_frames": "957"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "39.875011",
+            "nb_frames": "1719"
+          }
+        ],
+        "format": {
+          "duration": "39.875011"
+        }
+      }
+    }
+  },
+  "generated_files": {
+    "attention-v7.mp4": {
+      "sha256": "4a689eabc7c8c58d9f2d3a070e6079dbb2ae05b1d6be438960b57b4f9f52cfcf",
+      "bytes": 11328016,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 576,
+            "r_frame_rate": "24/1",
+            "duration": "20.041667",
+            "nb_frames": "481"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "20.040998",
+            "nb_frames": "865"
+          }
+        ],
+        "format": {
+          "duration": "20.041667"
+        }
+      }
+    },
+    "before-after.gif": {
+      "sha256": "ae7c47d1b9124ed0d8da51280a1a317b420d35f3dfc0a792fafd3a05193e97db",
+      "bytes": 5625961,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "codec_type": "video",
+            "width": 960,
+            "height": 318,
+            "r_frame_rate": "12/1",
+            "duration": "4.000000",
+            "nb_frames": "48"
+          }
+        ],
+        "format": {
+          "duration": "4.000000"
+        }
+      }
+    },
+    "before-after.mp4": {
+      "sha256": "8200455b65e08734bb5d7b9d3d42afddc349910bffb668d40dd98a91bc8b97ef",
+      "bytes": 2975838,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 424,
+            "r_frame_rate": "24/1",
+            "duration": "20.041667",
+            "nb_frames": "481"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "20.040998",
+            "nb_frames": "865"
+          }
+        ],
+        "format": {
+          "duration": "20.041667"
+        }
+      }
+    },
+    "boundary-proof.png": {
+      "sha256": "33aa100c705f53f95278dc9c6d1f6b37ba3dfebd1a05623d37333ea4c30c2cb0",
+      "bytes": 1068368,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "png",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 848,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {}
+      }
+    },
+    "h3-seamless-v14.mp4": {
+      "sha256": "ecd7e55210ab5292077eacf08a501ecaa4488b5b706ee8e4ccf33d444f270a00",
+      "bytes": 22183326,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 576,
+            "r_frame_rate": "24/1",
+            "duration": "39.875000",
+            "nb_frames": "957"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "39.875011",
+            "nb_frames": "1719"
+          }
+        ],
+        "format": {
+          "duration": "39.875011"
+        }
+      }
+    },
+    "handoffs.gif": {
+      "sha256": "ec015dfd449956ed9219c974f0dce86dbe26637a2886eec1473aeb0f4c7ef850",
+      "bytes": 5323342,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "gif",
+            "codec_type": "video",
+            "width": 960,
+            "height": 318,
+            "r_frame_rate": "12/1",
+            "duration": "4.000000",
+            "nb_frames": "48"
+          }
+        ],
+        "format": {
+          "duration": "4.000000"
+        }
+      }
+    },
+    "handoffs.mp4": {
+      "sha256": "f231ccddce4a105fc94d3f1fc14a98f3f0144fa385a11b133491228bd092733a",
+      "bytes": 508742,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 424,
+            "r_frame_rate": "24/1",
+            "duration": "4.000000",
+            "nb_frames": "96"
+          }
+        ],
+        "format": {
+          "duration": "4.000000"
+        }
+      }
+    },
+    "native-control.mp4": {
+      "sha256": "31986b09d10aba0326d826d782b37a4552fc8af657803643eff9283fc1e9dc1d",
+      "bytes": 11615308,
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1024,
+            "height": 576,
+            "r_frame_rate": "24/1",
+            "duration": "20.041667",
+            "nb_frames": "481"
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio",
+            "r_frame_rate": "0/0",
+            "duration": "20.040998",
+            "nb_frames": "865"
+          }
+        ],
+        "format": {
+          "duration": "20.041667"
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "before-after": {
+      "left": "native-control",
+      "right": "h3-seamless-v14",
+      "source_interval_seconds": [
+        0,
+        20.041666666666668
+      ],
+      "gif_interval_seconds": [
+        0,
+        4
+      ],
+      "type": "complete-pipeline comparison; replay does not begin until after the opening window"
+    },
+    "matched-attention-study": {
+      "before": "native-control",
+      "after": "attention-v7",
+      "type": "historically verified matching initial state and prompt/image encoding"
+    },
+    "handoffs": {
+      "left_interval_seconds": [
+        18,
+        22
+      ],
+      "right_interval_seconds": [
+        33,
+        37
+      ],
+      "source": "h3-seamless-v14",
+      "speed": "1x"
+    },
+    "boundary-proof": {
+      "source_video_frame_indices": [
+        31,
+        32
+      ],
+      "source_fps": 24
+    }
+  }
+}
